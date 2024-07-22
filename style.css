@@ -555,6 +555,112 @@ footer .footer--container .copyright {
   text-align: end;
 }
 
+.graphics-header--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.graphics-header--container .graphics-header--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: start;
+  gap: 3rem;
+}
+.graphics-header--container .graphics-header--text .graphics-scribble--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  gap: 2rem;
+}
+.graphics-header--container .graphics-header--text .graphics-scribble--text .scribble-text {
+  background-image: url(./images/hand-scribble.png);
+  background-size: cover;
+  width: 50%;
+  height: 20vh;
+}
+.graphics-header--container .graphics-header--text .back-button {
+  margin-top: 5rem;
+  padding: 0 3rem 0 0;
+}
+.graphics-header--container .graphics-header--image {
+  background-image: url(./images/pins.png);
+  background-size: cover;
+  width: 50%;
+  height: 70vh;
+}
+
+.projects-items--container .graphic-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 3rem;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  padding: 2rem;
+}
+.projects-items--container .graphic-item .graphic-item--image {
+  background-position: center;
+}
+.projects-items--container .graphic-item:nth-child(1) {
+  background-image: url(./images/scrap-one.jpg);
+}
+.projects-items--container .graphic-item:nth-child(1) .graphic-item--image {
+  background-image: url(./images/hoodie-1-front.png);
+}
+.projects-items--container .graphic-item:nth-child(1) .graphic-item--image:hover {
+  background-image: url(./images/hoodie-1-back.jpg);
+}
+.projects-items--container .graphic-item:nth-child(2) {
+  background-image: url(./images/scrap-two.jpg);
+}
+.projects-items--container .graphic-item:nth-child(2) .graphic-item--image {
+  background-image: url(./images/hoodie-2-front.jpg);
+}
+.projects-items--container .graphic-item:nth-child(2) .graphic-item--image:hover {
+  background-image: url(./images/hoodie-2-back.jpg);
+}
+.projects-items--container .graphic-item:nth-child(3) {
+  background-image: url(./images/scrap-three.jpg);
+}
+.projects-items--container .graphic-item:nth-child(3) .graphic-item--image {
+  background-image: url(./images/top-1-front.jpg);
+}
+.projects-items--container .graphic-item:nth-child(3) .graphic-item--image:hover {
+  background-image: url(./images/top-1-back.jpg);
+}
+.projects-items--container .graphic-item:nth-child(4) {
+  background-image: url(./images/scrap-four.jpg);
+}
+.projects-items--container .graphic-item:nth-child(4) .graphic-item--image {
+  background-image: url(./images/top-2-back.jpg);
+}
+.projects-items--container .graphic-item:nth-child(4) .graphic-item--image:hover {
+  background-image: url(./images/top-2-front.jpg);
+}
+.projects-items--container .graphic-item--image {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
 @media only screen and (max-width: 992px) {
   h2 {
     font-size: 45px;
@@ -607,6 +713,23 @@ footer .footer--container .copyright {
   }
   .projects-items--container .project-item {
     height: 45vh;
+  }
+  .graphics-header--container .graphics-header--text .graphics-scribble--text {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .graphics-header--container .graphics-header--text .graphics-scribble--text .scribble-text {
+    background-position: center;
+    width: 42vw;
+    height: 17vh;
+  }
+  .graphics-header--container .graphics-header--image {
+    width: 70%;
+    height: 58vh;
+  }
+  .projects-items--container .graphic-item {
+    height: 50vh;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -677,6 +800,29 @@ footer .footer--container .copyright {
   }
   .projects-items--container .project-item {
     height: 35vh;
+  }
+  .projects-items--container .graphic-item {
+    height: 40vh;
+    padding: 1rem;
+  }
+  .graphics-header--container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .graphics-header--container .graphics-header--text {
+    width: 100%;
+  }
+  .graphics-header--container .graphics-header--text .graphics-scribble--text {
+    align-items: center;
+    flex-direction: row;
+  }
+  .graphics-header--container .graphics-header--text .graphics-scribble--text .scribble-text {
+    width: 61%;
+    height: 17vh;
+  }
+  .graphics-header--container .graphics-header--image {
+    width: 100%;
+    height: 31vh;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -772,7 +918,7 @@ footer .footer--container .copyright {
   }
   header .header-text--container {
     gap: 1rem;
-    height: 60%;
+    height: 50%;
   }
   header .header-text--container .header-links--container {
     gap: 0rem;
@@ -814,5 +960,22 @@ footer .footer--container .copyright {
   }
   .projects-items--container .project-item {
     height: 35vh;
+  }
+  .graphics-header--container .graphics-header--text .back-button {
+    margin-top: 3rem;
+    padding: 0 3rem 0 0;
+  }
+  .graphics-header--container .graphics-header--text .graphics-scribble--text {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .graphics-header--container .graphics-header--text .graphics-scribble--text .scribble-text {
+    width: 100%;
+    height: 11vh;
+  }
+  .graphics-header--container .graphics-header--image {
+    width: 100%;
+    height: 16vh;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -352,6 +352,7 @@ header {
     .latest-project--box:hover {
         @include shadow;
         transition: all .5s ease;
+
         .prev-one {
             filter: grayscale(0%);
         }
@@ -408,23 +409,27 @@ footer {
     align-items: flex-start;
     gap: 3rem;
     padding: 0 3rem;
-    .project-title--container{
+
+    .project-title--container {
         @include main-box-sizing;
         flex-direction: column;
         align-items: flex-start;
         padding: 0;
         gap: 1rem;
     }
+
     .project-title--container:nth-child(1) {
         width: 30%;
     }
-    .vertical-span{
+
+    .vertical-span {
         width: 3px;
         height: 15vh;
         background-color: $primary-color;
         opacity: 50%;
     }
 }
+
 .projects-items--container {
     @include main-box-sizing;
     display: grid;
@@ -432,7 +437,7 @@ footer {
     width: 100%;
     height: auto;
     gap: 5rem;
-    
+
     .project-item {
         @include center-style;
         @include shadow;
@@ -443,6 +448,7 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: all .5s ease;
         cursor: pointer;
+
         &::before {
             content: '';
             position: absolute;
@@ -454,6 +460,7 @@ footer {
             transition: all .5s ease;
             z-index: 1;
         }
+
         h3 {
             display: none;
             transition: all .5s ease;
@@ -496,9 +503,11 @@ footer {
 
     .project-item:hover {
         box-shadow: none;
+
         &::before {
             background: rgba(0, 0, 0, 0.515);
         }
+
         h3 {
             display: flex;
         }
@@ -507,17 +516,19 @@ footer {
 
 // ---------------------------------BLOG PAGE 3
 
-.blog-container{
+.blog-container {
     @include main-box-sizing;
     flex-direction: column;
     gap: 5rem;
-    .blog-item--container{
+
+    .blog-item--container {
         @include main-box-sizing;
         justify-content: space-between;
         background-color: $grey;
         width: 100%;
         gap: 3rem;
-        .pinned-icon{
+
+        .pinned-icon {
             position: absolute;
             @include center-style;
             height: 50px;
@@ -526,28 +537,33 @@ footer {
             border-radius: 50%;
             top: 25vh;
             right: 5rem;
-            .fa-solid{
+
+            .fa-solid {
                 color: $secondary-color;
                 font-size: 20px;
             }
         }
-        .blog-content--titles{
+
+        .blog-content--titles {
             @include main-box-sizing;
             flex-direction: column;
             align-items: flex-start;
             padding: 0;
             width: 40%;
             gap: 2rem;
-            .blog-image--container{
+
+            .blog-image--container {
                 width: 100%;
                 background-size: cover;
             }
-            .pinned-image{
+
+            .pinned-image {
                 height: 60vh;
                 background-image: url(./images/myblog.jpg);
             }
         }
-        .blog-content--text{
+
+        .blog-content--text {
             @include center-style;
             flex-direction: column;
             justify-content: space-between;
@@ -555,11 +571,13 @@ footer {
             gap: 3rem;
             padding: 0;
             width: 60%;
-            .blog-date{
+
+            .blog-date {
                 @include center-style;
                 justify-content: flex-end;
                 width: 100%;
-                h6{
+
+                h6 {
                     text-align: end;
                 }
             }
@@ -567,6 +585,107 @@ footer {
     }
 }
 
+// -------------------- PAGE 4 GRAPHICS
+
+.graphics-header--container {
+    @include main-box-sizing;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    .graphics-header--text {
+        @include center-style;
+        width: 60%;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: start;
+        gap: 3rem;
+
+        .graphics-scribble--text {
+            @include center-style;
+            align-items: flex-end;
+            justify-content: flex-start;
+            flex-direction: row;
+            width: 100%;
+            gap: 2rem;
+            .scribble-text {
+                background-image: url(./images/hand-scribble.png);
+                background-size: cover;
+                width: 50%;
+                height: 20vh;
+            }
+        }
+
+        .back-button {
+            margin-top: 5rem;
+            padding: 0 3rem 0 0;
+        }
+    }
+
+    .graphics-header--image {
+        background-image: url(./images/pins.png);
+        background-size: cover;
+        width: 50%;
+        height: 70vh;
+    }
+}
+
+.projects-items--container {
+    .graphic-item {
+        @include main-box-sizing;
+        width: 100%;
+        height: 70vh;
+        background-size: cover;
+        padding: 2rem;
+        .graphic-item--image{
+            background-position: center;
+        }
+    }
+
+    .graphic-item:nth-child(1) {
+        background-image: url(./images/scrap-one.jpg);
+        .graphic-item--image{
+            background-image: url(./images/hoodie-1-front.png);
+        }
+        .graphic-item--image:hover{
+            background-image: url(./images/hoodie-1-back.jpg);
+        }
+    }
+    .graphic-item:nth-child(2) {
+        background-image: url(./images/scrap-two.jpg);
+        .graphic-item--image{
+            background-image: url(./images/hoodie-2-front.jpg);
+        }
+        .graphic-item--image:hover{
+            background-image: url(./images/hoodie-2-back.jpg);
+        }
+    }
+    .graphic-item:nth-child(3) {
+        background-image: url(./images/scrap-three.jpg);
+        .graphic-item--image{
+            background-image: url(./images/top-1-front.jpg);
+        }
+        .graphic-item--image:hover {
+            background-image: url(./images/top-1-back.jpg);
+        }
+    }
+    .graphic-item:nth-child(4) {
+        background-image: url(./images/scrap-four.jpg);
+        .graphic-item--image{
+            background-image: url(./images/top-2-back.jpg);
+        }
+        .graphic-item--image:hover {
+            background-image: url(./images/top-2-front.jpg);
+        }
+    }
+
+    .graphic-item--image {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        transition: all .5s ease;
+    }
+}
 
 
 @media only screen and (min-width: 992px) {}
@@ -631,12 +750,32 @@ footer {
             grid-area: 4 / 1 / 5 / 3;
         }
     }
+
     // -----------------
     .projects-items--container {
         grid-template-columns: repeat(2, 1fr);
+
         .project-item {
             height: 45vh;
         }
+    }
+    // --------------------PAGE GRAPHICS
+    .graphics-header--container .graphics-header--text .graphics-scribble--text {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        .scribble-text {
+            background-position: center;
+            width: 42vw;
+            height: 17vh;
+        }
+    }
+    .graphics-header--container .graphics-header--image {
+        width: 70%;
+        height: 58vh;
+    }
+    .projects-items--container .graphic-item {
+        height: 50vh;
     }
 }
 
@@ -685,6 +824,7 @@ footer {
             height: 40vh;
             text-align: center;
             padding-bottom: 2rem;
+
             h3 {
                 filter: none;
                 -webkit-filter: none;
@@ -697,6 +837,7 @@ footer {
                 transition: none;
             }
         }
+
         .graphic-designs,
         .web-designs,
         .blog {
@@ -722,21 +863,48 @@ footer {
     .latest-projects--container {
         flex-direction: column;
     }
+
     // --------------
     .projects-items--container {
         .project-item {
             height: 35vh;
         }
     }
+    .projects-items--container .graphic-item {
+        height: 40vh;
+        padding: 1rem;
+    }
+    // ----------
+    .graphics-header--container {
+        flex-direction: column;
+        gap: 2rem;
+        .graphics-header--text {
+            width: 100%;
+            .graphics-scribble--text {
+                align-items: center;
+                flex-direction: row;
+                .scribble-text {
+                    width: 61%;
+                    height: 17vh;
+                }
+            }
+        }
+        .graphics-header--image {
+            width: 100%;
+            height: 31vh;
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    p{
+    p {
         font-size: 12px;
     }
+
     .back-button {
         margin-top: 6rem;
     }
+
     .main-links--container {
         flex-direction: column;
 
@@ -759,56 +927,68 @@ footer {
         flex-direction: column;
         gap: 1rem;
     }
-        // --------------
-        .page-break--line {
-            padding: 1rem 3rem;
+
+    // --------------
+    .page-break--line {
+        padding: 1rem 3rem;
+        width: 100%;
+    }
+
+    .projects-header--container {
+        padding: 3rem;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 3rem;
+
+        .vertical-span {
             width: 100%;
+            height: 3px;
         }
-        .projects-header--container {
-            padding: 3rem;
-            align-items: flex-start;
-            flex-direction: column;
+
+        .project-title--container {
+            padding: 0;
             gap: 1rem;
-            padding: 0 3rem;
-            .vertical-span {
-                width: 100%;
-                height: 3px;
-            }
-            .project-title--container {
-                padding: 0;
-                gap: 1rem;
-            }
         }
-        .projects-items--container {
-            grid-template-columns: repeat(1, 1fr);
-            .project-item {
-                height: 45vh;
-            }
+    }
+
+    .projects-items--container {
+        grid-template-columns: repeat(1, 1fr);
+
+        .project-item {
+            height: 45vh;
         }
+    }
+
     // -------------
     .blog-container .blog-item--container {
         flex-direction: column;
         padding: 1rem;
         width: 100%;
+
         .blog-content--titles {
             padding: 3rem;
             padding: 0;
             width: 100%;
             gap: 2rem;
+
             .pinned-image {
                 height: 20vh;
             }
         }
+
         .blog-content--text {
             padding: 0;
             width: 100%;
         }
+
         .pinned-icon {
             height: 40px;
             width: 40px;
             top: 22vh;
             right: 4rem;
-            .fa-solid{
+
+            .fa-solid {
                 font-size: 17px;
             }
         }
@@ -817,28 +997,32 @@ footer {
 
 
 @media only screen and (max-width: 440px) {
-    h4{
+    h4 {
         font-size: 40px;
     }
+
     h2 {
         font-size: 37px;
     }
 
     nav {
-        .nav{
+        .nav {
             align-items: flex-start;
         }
     }
 
     header {
         gap: 1rem;
+
         .header-text--container {
             gap: 1rem;
-            height: 60%;
+            height: 50%;
+
             .header-links--container {
                 gap: 0rem;
             }
         }
+
         .header-img--container {
             height: 30%;
         }
@@ -883,14 +1067,34 @@ footer {
 
     .latest-projects--container {
         flex-direction: column;
-        .latest-project--box{
+
+        .latest-project--box {
             padding: 1rem;
         }
     }
+
     // --------------
     .projects-items--container {
         .project-item {
             height: 35vh;
         }
+    }
+    // -----------
+    .graphics-header--container .graphics-header--text .back-button {
+        margin-top: 3rem;
+        padding: 0 3rem 0 0;
+    }
+    .graphics-header--container .graphics-header--text .graphics-scribble--text {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .graphics-header--container .graphics-header--text .graphics-scribble--text .scribble-text {
+        width: 100%;
+        height: 11vh;
+    }
+    .graphics-header--container .graphics-header--image {
+        width: 100%;
+        height: 16vh;
     }
 }
