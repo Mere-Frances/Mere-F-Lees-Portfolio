@@ -535,7 +535,7 @@ footer {
             width: 50px;
             background-color: $accent-color;
             border-radius: 50%;
-            top: 25vh;
+            top: 22vh;
             right: 5rem;
 
             .fa-solid {
@@ -600,7 +600,6 @@ footer {
         flex-direction: column;
         text-align: start;
         gap: 3rem;
-
         .graphics-scribble--text {
             @include center-style;
             align-items: flex-end;
@@ -615,7 +614,6 @@ footer {
                 height: 20vh;
             }
         }
-
         .back-button {
             margin-top: 5rem;
             padding: 0 3rem 0 0;
